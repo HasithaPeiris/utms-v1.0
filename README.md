@@ -64,7 +64,83 @@ This project is a university timetable system developed using the MERN stack. Th
 
 ## API Documentation
 
-Swagger or Postman documentation can be found [here](#).
+## Base URL
+
+```
+http://localhost:5000/api
+```
+
+## Authentication
+
+Authentication is required for most endpoints. You need to register and log in as a new user or you can use the credentials below to login.
+
+## Authorization
+
+**Admin**
+1. Manage Courses
+2. Manage Users
+3. Manage Sessions
+4. Manage Enrollments
+5. Manage Faculties
+6. Manage Bookings
+
+**Faculty**
+1. Manage Courses
+2. Manage Sessions
+3. Manage Bookings
+4. Manage Enrollments
+
+**Student**
+1. Enroll Courses
+2. View Timetables
+
+## Endpoints
+
+### Users
+
+#### `POST /users` - Create a new user.
+#### `GET /users/{user_id}` - Retrieve details of a specific user.
+#### `PUT /users/{user_id}` - Update a user.
+#### `DELETE /users/{user_id}` - Delete a user.
+
+### Courses
+
+#### `GET /courses` - Retrieve all courses.
+#### `POST /courses` - Create a new course.
+#### `GET /courses/{course_id}` - Retrieve details of a specific course.
+#### `PUT /courses/{course_id}` - Update a course.
+#### `DELETE /courses/{course_id}` - Delete a course.
+
+### Faculties
+
+#### `POST /faculties` - Create a new faculty.
+#### `GET /faculties` - Retrieve all faculties.
+#### `GET /faculties/{faculty_id}` - Retrieve details of a specific faculty.
+#### `PUT /faculties/{faculty_id}` - Update a faculty.
+#### `DELETE /faculties/{faculty_id}` - Delete a faculty.
+
+### Sessions
+
+#### `GET /sessions` - Retrieve all sessions.
+#### `POST /sessions/{course_id}` - Add Session to Course
+#### `GET /sessions/{session_id}` - Retrieve details of a specific session.
+#### `PUT /sessions/{session_id}` - Update a session.
+#### `DELETE /sessions/{session_id}` - Delete a session.
+
+### Bookings
+
+#### `GET /bookings` - Retrieve all bookings.
+#### `POST /bookings` - Create a new booking.
+#### `GET /bookings/{booking_id}` - Retrieve details of a specific booking.
+#### `PUT /bookings/{booking_id}` - Update a booking.
+#### `DELETE /bookings/{booking_id}` - Delete a booking.
+
+### Enrollments
+
+#### `GET /courses/{course_id}/enrollments` - Retrieve all enrollments for a course.
+#### `POST /courses/{course_id}/enroll` - Enroll to a course.
+#### `GET /courses/{course_id}/sessions` - Get enrolled sessions.
+#### `DELETE /courses/{course_id}/enrollments/{enrollment_id}` - Delete Enrollment.
 
 ## Testing
 
